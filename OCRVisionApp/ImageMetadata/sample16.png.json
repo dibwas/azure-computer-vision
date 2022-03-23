@@ -1,0 +1,156 @@
+{
+  "categories": [
+    {
+      "name": "animal_dog",
+      "score": 0.99609375,
+      "detail": null
+    }
+  ],
+  "adult": {
+    "isAdultContent": false,
+    "isRacyContent": false,
+    "adultScore": 0.007902846671640873,
+    "racyScore": 0.008481458760797977
+  },
+  "color": {
+    "dominantColorForeground": "White",
+    "dominantColorBackground": "Grey",
+    "dominantColors": [
+      "Grey",
+      "Green"
+    ],
+    "accentColor": "A36D28",
+    "isBWImg": false
+  },
+  "imageType": {
+    "clipArtType": 0,
+    "lineDrawingType": 0
+  },
+  "tags": [
+    {
+      "name": "grass",
+      "confidence": 0.9999991655349731,
+      "hint": null
+    },
+    {
+      "name": "dog",
+      "confidence": 0.9997798204421997,
+      "hint": null
+    },
+    {
+      "name": "outdoor",
+      "confidence": 0.9987870454788208,
+      "hint": null
+    },
+    {
+      "name": "carnivore",
+      "confidence": 0.9698212146759033,
+      "hint": null
+    },
+    {
+      "name": "animal",
+      "confidence": 0.9081212282180786,
+      "hint": null
+    },
+    {
+      "name": "cute",
+      "confidence": 0.8604430556297302,
+      "hint": null
+    },
+    {
+      "name": "mammal",
+      "confidence": 0.8348946571350098,
+      "hint": "animal"
+    },
+    {
+      "name": "laying",
+      "confidence": 0.6573169231414795,
+      "hint": null
+    },
+    {
+      "name": "companion dog",
+      "confidence": 0.5827376842498779,
+      "hint": null
+    },
+    {
+      "name": "dog breed",
+      "confidence": 0.5543172359466553,
+      "hint": null
+    },
+    {
+      "name": "terrier",
+      "confidence": 0.5425229668617249,
+      "hint": null
+    },
+    {
+      "name": "sporting group",
+      "confidence": 0.5171964168548584,
+      "hint": null
+    },
+    {
+      "name": "tan",
+      "confidence": 0.12760749459266663,
+      "hint": null
+    }
+  ],
+  "description": {
+    "tags": [
+      "grass",
+      "dog",
+      "outdoor",
+      "animal",
+      "mammal",
+      "sitting",
+      "laying",
+      "field",
+      "brown",
+      "frisbee",
+      "small",
+      "white",
+      "green",
+      "red",
+      "orange",
+      "large",
+      "yellow",
+      "grassy",
+      "playing",
+      "blue",
+      "standing"
+    ],
+    "captions": [
+      {
+        "text": "a dog sitting on top of a grass covered field",
+        "confidence": 0.9407834464889868
+      }
+    ]
+  },
+  "faces": [],
+  "objects": [
+    {
+      "rectangle": {
+        "x": 78,
+        "y": 231,
+        "w": 664,
+        "h": 906
+      },
+      "object": "dog",
+      "confidence": 0.903,
+      "parent": {
+        "object": "mammal",
+        "confidence": 0.908,
+        "parent": {
+          "object": "animal",
+          "confidence": 0.909,
+          "parent": null
+        }
+      }
+    }
+  ],
+  "brands": [],
+  "requestId": "f5cd0857-e6b1-4dfd-b37a-a69d92763893",
+  "metadata": {
+    "width": 1295,
+    "height": 1155,
+    "format": "Png"
+  }
+}

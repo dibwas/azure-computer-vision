@@ -1,0 +1,76 @@
+# Template pipeline for the deployment of shared infrastructure
+# that the Computer Vision workspaces depend on.
+#
+# This pipeline deploys a KeyVault instance, One Storage account (ADLS - Azure Data lake Service), 
+# One SQL server Along with SQL database for image metadata storage, one Computer Vision endpoint
+
+pool:
+  name: Hosted Windows 2019 with VS2019
+  
+steps:
+
+- download: current
+  artifact: $(armArtifactName)
+
+# - task: AzureCLI@1
+#   displayName: Check if KeyVault exists
+#   condition: ne(variables['deploymentMode'], 'Validation')
+#   inputs:
+#     azureSubscription: $(serviceConnection)
+#     scriptLocation: inlineScript
+#     workingDirectory: $(Pipeline.Workspace)/$(armArtifactName)/scripts
+#     inlineScript: 'sh check-keyvault.sh $(environment) $(resource_group_name)'
+ 
+# - task: AzureResourceGroupDeployment@2
+#   displayName: 'Deployment: Key Vault'
+#   inputs:
+#     azureSubscription: $(serviceConnection)
+#     resourceGroupName: $(resource_group_name)
+#     location: $(location)
+#     csmFile: '$(Pipeline.Workspace)/$(armArtifactName)/keyvault/template.json'
+#     csmParametersFile: '$(Pipeline.Workspace)/$(armArtifactName)/keyvault/parameters.json'
+#     addSpnToEnvironment: true
+#     deploymentMode: $(deploymentMode)
+
+# - task: AzureResourceGroupDeployment@2
+#   displayName: 'Deployment: Resource Group Deployment'
+#   inputs:
+#     azureSubscription: $(serviceConnection)
+#     resourceGroupName: $(resource_group_name)
+#     location: $(location)
+#     csmFile: '$(Pipeline.Workspace)/$(armArtifactName)/ResourceGroup/resourcegroup.template.json'
+#     csmParametersFile: '$(Pipeline.Workspace)/$(armArtifactName)/ResourceGroup/resourcegroup.parameters.json'
+#     deploymentMode: $(deploymentMode)
+
+- task: AzureResourceGroupDeployment@2
+  displayName: 'Deployment: Computer Vision'
+  inputs:
+    azureSubscription: $(serviceConnection)
+    resourceGroupName: $(resource_group_name)
+    location: $(location)
+    csmFile: '$(Pipeline.Workspace)/$(armArtifactName)/ComputerVision/computervision.template.json'
+    csmParametersFile: '$(Pipeline.Workspace)/$(armArtifactName)/ComputerVision/computervision.parameters.json'
+    deploymentMode: $(deploymentMode)
+
+# - task: AzureResourceGroupDeployment@2
+#   displayName: 'Deployment: SQL Server'
+#   inputs:
+#     azureSubscription: $(serviceConnection)
+#     resourceGroupName: $(resource_group_name)
+#     location: $(location)
+#     csmFile: '$(Pipeline.Workspace)/$(armArtifactName)/sql/sqlserver.template.json'
+#     csmParametersFile: '$(Pipeline.Workspace)/$(armArtifactName)/sql/sqlserver.parameters.json'
+#     overrideParameters: |
+#       -administratorLoginPassword "$(sqlServerAdminPass)" 
+#     deploymentMode: $(deploymentMode)
+
+
+# - task: AzureResourceGroupDeployment@2
+#   displayName: 'Deployment: SQL DB metadata DB'
+#   inputs:
+#     azureSubscription: $(serviceConnection)
+#     resourceGroupName: $(resource_group_name)
+#     location: $(location)
+#     csmFile: '$(Pipeline.Workspace)/$(armArtifactName)/sql/metadatadb.template.json'
+#     csmParametersFile: '$(Pipeline.Workspace)/$(armArtifactName)/sql/metadatadb.parameters.json'
+#     deploymentMode: $(deploymentMode)

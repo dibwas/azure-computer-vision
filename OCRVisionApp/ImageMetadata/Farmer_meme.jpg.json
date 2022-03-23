@@ -1,0 +1,160 @@
+{
+  "categories": [
+    {
+      "name": "text_mag",
+      "score": 0.97265625,
+      "detail": null
+    }
+  ],
+  "adult": {
+    "isAdultContent": false,
+    "isRacyContent": true,
+    "adultScore": 0.6798214912414551,
+    "racyScore": 0.6801010370254517
+  },
+  "color": {
+    "dominantColorForeground": "White",
+    "dominantColorBackground": "White",
+    "dominantColors": [
+      "White",
+      "Grey",
+      "Black"
+    ],
+    "accentColor": "8B8140",
+    "isBWImg": false
+  },
+  "imageType": {
+    "clipArtType": 0,
+    "lineDrawingType": 0
+  },
+  "tags": [
+    {
+      "name": "grass",
+      "confidence": 0.9999091625213623,
+      "hint": null
+    },
+    {
+      "name": "text",
+      "confidence": 0.9962952136993408,
+      "hint": null
+    },
+    {
+      "name": "outdoor",
+      "confidence": 0.9897639155387878,
+      "hint": null
+    },
+    {
+      "name": "sky",
+      "confidence": 0.9892579317092896,
+      "hint": null
+    },
+    {
+      "name": "person",
+      "confidence": 0.9703189134597778,
+      "hint": null
+    },
+    {
+      "name": "screenshot",
+      "confidence": 0.9685823917388916,
+      "hint": null
+    },
+    {
+      "name": "poster",
+      "confidence": 0.9560753107070923,
+      "hint": null
+    },
+    {
+      "name": "man",
+      "confidence": 0.9391375780105591,
+      "hint": null
+    },
+    {
+      "name": "human face",
+      "confidence": 0.864100456237793,
+      "hint": null
+    },
+    {
+      "name": "field",
+      "confidence": 0.8085432648658752,
+      "hint": null
+    },
+    {
+      "name": "smile",
+      "confidence": 0.7756749391555786,
+      "hint": null
+    },
+    {
+      "name": "funny",
+      "confidence": 0.5895530581474304,
+      "hint": null
+    },
+    {
+      "name": "clothing",
+      "confidence": 0.5658636093139648,
+      "hint": null
+    }
+  ],
+  "description": {
+    "tags": [
+      "grass",
+      "outdoor",
+      "person",
+      "man",
+      "field",
+      "smiling",
+      "holding",
+      "photo",
+      "standing",
+      "sign",
+      "front",
+      "sitting",
+      "open",
+      "green",
+      "large",
+      "old",
+      "wearing",
+      "white",
+      "riding",
+      "blue",
+      "giraffe"
+    ],
+    "captions": [
+      {
+        "text": "a man sitting in a field",
+        "confidence": 0.8943122384804649
+      }
+    ]
+  },
+  "faces": [
+    {
+      "age": 51,
+      "gender": "Male",
+      "faceRectangle": {
+        "left": 123,
+        "top": 75,
+        "width": 81,
+        "height": 81
+      }
+    }
+  ],
+  "objects": [
+    {
+      "rectangle": {
+        "x": 22,
+        "y": 43,
+        "w": 359,
+        "h": 287
+      },
+      "object": "person",
+      "confidence": 0.78,
+      "parent": null
+    }
+  ],
+  "brands": [],
+  "requestId": "cf5854b7-dd32-48dd-96e4-0c97275a0bce",
+  "metadata": {
+    "width": 540,
+    "height": 332,
+    "format": "Jpeg"
+  }
+}
